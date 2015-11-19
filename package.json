@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Create your own super hero from a list of known super heroes",
   "main": "index.js",
-  "scripts": {
-    "api": "json-server support/data.json -p 3001 --watch"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/spoonben/hero-merge.git"
