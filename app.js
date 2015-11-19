@@ -2,7 +2,7 @@ var jsonServer = require('json-server')
 
 // Returns an Express server
 var server = jsonServer.create();
-
+server.set('port', process.env.PORT || 3000);
 // Set default middlewares (logger, static, cors and no-cache)
 server.use(jsonServer.defaults());
 
@@ -13,4 +13,4 @@ server.use(jsonServer.defaults());
 var router = jsonServer.router('data/data.json');
 server.use(router);
 
-server.listen(3000);
+server.listen(app.get('port'));
