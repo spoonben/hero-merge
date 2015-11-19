@@ -20,8 +20,10 @@
   },
   "homepage": "https://github.com/spoonben/hero-merge",
   "dependencies": {
+    "crypto": "0.0.3",
     "express": "^4.13.3",
     "json-server": "^0.8.2",
+    "jsonfile": "^2.2.3",
     "mongoose": "^4.2.6"
   }
 }
