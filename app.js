@@ -13,4 +13,4 @@ server.use(jsonServer.defaults());
 var router = jsonServer.router('data/data.json');
 server.use(router);
 
-server.listen(app.get('port'));
+server.listen(server.get('port'));
