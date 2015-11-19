@@ -232,6 +232,31 @@
       "weaknesses": [
         "Mortal"
       ]
+    },
+    {
+      "id": 11,
+      "hero_name": "Captain America",
+      "real_name": "Steven Rogers",
+      "gender": "Male",
+      "attributes": {
+        "intelligence": 63,
+        "strength": 19,
+        "speed": 35,
+        "durability": 56,
+        "power": 55,
+        "combat": 100
+      },
+      "powers": [
+        "Peak Human Strength",
+        "Peak Human Speed",
+        "Peak Human Agility",
+        "Peak Human Healing",
+        "Martial Arts",
+        "Master Sheild Fighter"
+      ],
+      "weaknesses": [
+        "Mortal"
+      ]
     }
   ]
 }
