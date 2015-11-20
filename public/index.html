@@ -1558,8 +1558,7 @@
     }
 
     body {
-        margin: 0;
-        padding:20px;
+        margin: 0
     }
 
     article,
@@ -4737,51 +4736,202 @@
 
 <body id="preview">
     <h1><a id="Create_Your_Own_Hero_0"></a>Create Your Own Hero</h1>
-    <p>An API for creating super heros.</p>
-    <h2><a id="Getting_an_API_Key_4"></a>Getting an API Key</h2>
+    <p>An API for creating super heroes.</p>
+    <h2><a id="The_Assignment_4"></a>The Assignment</h2>
+    <p>Create an app, in the framework / using the libraries of your choice that would allow a user to:</p>
+    <ul>
+        <li>Create a brand new super hero.
+            <ul>
+                <li>Should require:
+                    <ul>
+                        <li>A “super hero name”</li>
+                        <li>A real name</li>
+                        <li>Points in <strong>all</strong> atrributes</li>
+                        <li>A list of powers</li>
+                        <li>A list of weaknesses</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Merge two super heroes into a new super hero.
+            <ul>
+                <li>User should be able to:
+                    <ul>
+                        <li>Choose which attributes from either super hero the user would like to use</li>
+                        <li>Choose up to, but not over, 5 super powers total</li>
+                        <li>Name their hero (super hero name, as well as real name)</li>
+                    </ul>
+                </li>
+                <li>The new hero should have the weaknesses of <strong>both</strong> super heroes</li>
+            </ul>
+        </li>
+    </ul>
+    <p>The application should be written with your time in mind, we ask that you don’t spend more than 5 hours working on it, but the choice is yours.</p>
+    <p>The app should be handed in within a week of the date assigned with the following:</p>
+    <ul>
+        <li>The source of the app
+            <ul>
+                <li>A gzip or other is fine, on Github would be great too.</li>
+            </ul>
+        </li>
+        <li>A short write up of:
+            <ul>
+                <li>How to run the app</li>
+                <li>An estimate of how much time was spent developing</li>
+                <li>What you would have done if given more time</li>
+            </ul>
+        </li>
+    </ul>
+    <p>Most importantly, have fun with it! This is your chance to show us what you’ve got!</p>
+    <h2><a id="Getting_an_API_Key_37"></a>Getting an API Key</h2>
     <p>In order to develop against the API, you’ll need a key. To obtain a key, hit <code>https://hero-merge.herokuapp.com/getApiKey</code>.</p>
-    <p>The returned key is yours! Then just hit <code>https://hero-merge.herokuapp.com/[your-api-key]</code> to get the initial data back.</p>
-    <h2><a id="API_9"></a>API</h2>
-    <p>This API only has one endpoint, <code>heroes</code>. This will be your GET, you PATCH, and your PUT endpoint.</p>
-    <h4><a id="GET_heroes_12"></a>GET <code>/heroes</code></h4>
-    <p>Returns a list of all available heros</p>
-    <p>Example response:</p>
-    <pre><code class="language-json">[
-  {
-    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">3</span></span>,
-    "<span class="hljs-attribute">hero_name</span>": <span class="hljs-value"><span class="hljs-string">"Super Man"</span></span>,
-    "<span class="hljs-attribute">real_name</span>": <span class="hljs-value"><span class="hljs-string">"Clark Kent (Kal-El)"</span></span>,
-    "<span class="hljs-attribute">gender</span>": <span class="hljs-value"><span class="hljs-string">"Male"</span></span>,
-    "<span class="hljs-attribute">attributes</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">intelligence</span>": <span class="hljs-value"><span class="hljs-number">100</span></span>,
-      "<span class="hljs-attribute">strength</span>": <span class="hljs-value"><span class="hljs-number">100</span></span>,
-      "<span class="hljs-attribute">speed</span>": <span class="hljs-value"><span class="hljs-number">100</span></span>,
-      "<span class="hljs-attribute">durability</span>": <span class="hljs-value"><span class="hljs-number">100</span></span>,
-      "<span class="hljs-attribute">power</span>": <span class="hljs-value"><span class="hljs-number">100</span></span>,
-      "<span class="hljs-attribute">combat</span>": <span class="hljs-value"><span class="hljs-number">65</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">powers</span>": <span class="hljs-value">[
-      <span class="hljs-string">"Flight"</span>,
-      <span class="hljs-string">"Super-strength"</span>,
-      <span class="hljs-string">"Super Speed"</span>,
-      <span class="hljs-string">"Super Hearing"</span>,
-      <span class="hljs-string">"Super Smell"</span>,
-      <span class="hljs-string">"Healing Factor"</span>,
-      <span class="hljs-string">"Super Breath"</span>,
-      <span class="hljs-string">"Heat Vision"</span>,
-      <span class="hljs-string">"Super Vision"</span>
-    ]</span>,
-    "<span class="hljs-attribute">weaknesses</span>": <span class="hljs-value">[
-      <span class="hljs-string">"Magic"</span>,
-      <span class="hljs-string">"Kryptonite"</span>,
-      <span class="hljs-string">"Lead"</span>,
-      <span class="hljs-string">"Solar Energy"</span>
-    ]
-  </span>}
-]
+    <p>The returned key is yours! Then just hit <code>https://hero-merge.herokuapp.com/[your-api-key]/heroes</code> to get the initial data back.</p>
+    <h2><a id="API_42"></a>API</h2>
+    <p>The API contains a single endpoint, <code>heroes</code>, which supports <strong>GET</strong>, <strong>POST</strong>, and <strong>PATCH</strong> requests.</p>
+    <h4><a id="GET_yourapikeyheroes_45"></a>GET <code>[your-api-key]/heroes</code></h4>
+    <p>Returns a list of all available heroes.</p>
+    <p>Example request:</p>
+    <pre><code class="language-http"><span class="hljs-request">GET <span class="hljs-string">/7c023f01/heroes</span> HTTP/1.1</span>
+<span class="hljs-attribute">Accept</span>: <span class="hljs-string">application/json</span>
+<span class="hljs-attribute">Host</span>: <span class="hljs-string">hero-merge.herokuapp.com</span>
+<span class="hljs-attribute">User-Agent</span>: <span class="hljs-string">HTTPie/0.9.2</span>
 </code></pre>
-    <h4><a id="GET_heroesid_52"></a>GET <code>/heroes/{id}</code></h4>
+    <p>Example response:</p>
+    <pre><code class="language-http"><span class="hljs-status">HTTP/1.1 <span class="hljs-number">200</span> OK</span>
+<span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json; charset=utf-8</span>
+<span class="hljs-attribute">Date</span>: <span class="hljs-string">Fri, 20 Nov 2015 14:18:57 GMT</span>
+
+<span class="json">[
+    {
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">3</span></span>,
+        "<span class="hljs-attribute">hero_name</span>": <span class="hljs-value"><span class="hljs-string">"Super Man"</span></span>,
+        "<span class="hljs-attribute">real_name</span>": <span class="hljs-value"><span class="hljs-string">"Clark Kent (Kal-El)"</span></span>,
+        "<span class="hljs-attribute">gender</span>": <span class="hljs-value"><span class="hljs-string">"Male"</span></span>,
+        "<span class="hljs-attribute">attributes</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">intelligence</span>": <span class="hljs-value"><span class="hljs-number">100</span></span>,
+            "<span class="hljs-attribute">strength</span>": <span class="hljs-value"><span class="hljs-number">100</span></span>,
+            "<span class="hljs-attribute">speed</span>": <span class="hljs-value"><span class="hljs-number">100</span></span>,
+            "<span class="hljs-attribute">durability</span>": <span class="hljs-value"><span class="hljs-number">100</span></span>,
+            "<span class="hljs-attribute">power</span>": <span class="hljs-value"><span class="hljs-number">100</span></span>,
+            "<span class="hljs-attribute">combat</span>": <span class="hljs-value"><span class="hljs-number">65</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">powers</span>": <span class="hljs-value">[
+            <span class="hljs-string">"Flight"</span>,
+            <span class="hljs-string">"Super-strength"</span>,
+            <span class="hljs-string">"Super Speed"</span>,
+            <span class="hljs-string">"Super Hearing"</span>,
+            <span class="hljs-string">"Super Smell"</span>,
+            <span class="hljs-string">"Healing Factor"</span>,
+            <span class="hljs-string">"Super Breath"</span>,
+            <span class="hljs-string">"Heat Vision"</span>,
+            <span class="hljs-string">"Super Vision"</span>
+        ]</span>,
+        "<span class="hljs-attribute">weaknesses</span>": <span class="hljs-value">[
+            <span class="hljs-string">"Magic"</span>,
+            <span class="hljs-string">"Kryptonite"</span>,
+            <span class="hljs-string">"Lead"</span>,
+            <span class="hljs-string">"Solar Energy"</span>
+        ]
+    </span>},
+    ...
+]
+</span></code></pre>
+    <h4><a id="GET_yourapikeyheroesid_98"></a>GET <code>[your-api-key]/heroes/{id}</code></h4>
     <p>Returns a single hero’s information</p>
+    <p>Example request:</p>
+    <pre><code class="language-http"><span class="hljs-request">GET <span class="hljs-string">/7c023f01/heroes/1</span> HTTP/1.1</span>
+<span class="hljs-attribute">Accept</span>: <span class="hljs-string">application/json</span>
+<span class="hljs-attribute">Host</span>: <span class="hljs-string">hero-merge.herokuapp.com</span>
+</code></pre>
+    <p>Example response:</p>
+    <pre><code class="language-http">```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Date: Fri, 20 Nov 2015 14:18:57 GMT
+
+{
+    "id": 3,
+    "hero_name": "Super Man",
+    "real_name": "Clark Kent (Kal-El)",
+    "gender": "Male",
+    "attributes": {
+        "intelligence": 100,
+        "strength": 100,
+        "speed": 100,
+        "durability": 100,
+        "power": 100,
+        "combat": 65
+    },
+    "powers": [
+        "Flight",
+        "Super-strength",
+        "Super Speed",
+        "Super Hearing",
+        "Super Smell",
+        "Healing Factor",
+        "Super Breath",
+        "Heat Vision",
+        "Super Vision"
+    ],
+    "weaknesses": [
+        "Magic",
+        "Kryptonite",
+        "Lead",
+        "Solar Energy"
+    ]
+}
+</code></pre>
+    <h4><a id="POST_yourapikeyheroes_148"></a>POST <code>[your-api-key]/heroes</code></h4>
+    <p>Create a new hero. The <code>id</code> will be automatically generated. All other fields need to be provided in <code>JSON</code> format. See the <a href="#get-your-api-keyheroes">GET</a> example above for the list of expected fields.</p>
+    <p>Example request:</p>
+    <pre><code class="language-http"><span class="hljs-request">POST <span class="hljs-string">/7c023f01/heroes</span> HTTP/1.1</span>
+<span class="hljs-attribute">Accept</span>: <span class="hljs-string">application/json</span>
+<span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span>
+<span class="hljs-attribute">Host</span>: <span class="hljs-string">hero-merge.herokuapp.com</span>
+
+<span class="clojure"><span class="hljs-collection">{
+    <span class="hljs-string">"hero_name"</span>: <span class="hljs-string">"Super Man"</span>,
+    <span class="hljs-string">"real_name"</span>: <span class="hljs-string">"Clark Kent (Kal-El)"</span>,
+    ...
+}</span>
+</span></code></pre>
+    <p>Example response:</p>
+    <pre><code class="language-http">```http
+HTTP/1.1 201 Created
+Content-Type: application/json; charset=utf-8
+Date: Fri, 20 Nov 2015 14:18:57 GMT
+
+{
+    "id": 11,
+    "hero_name": "Super Man",
+    "real_name": "Clark Kent (Kal-El)",
+    ...
+}
+</code></pre>
+    <h4><a id="PATCH_yourapikeyheroesid_181"></a>PATCH <code>[your-api-key]/heroes/{id}</code></h4>
+    <p>Update an existing hero. Fields must to be provided in <code>JSON</code> format. Fields that are not provided in the request body will not be updated.</p>
+    <p>Example request:</p>
+    <pre><code class="language-http"><span class="hljs-request">PATCH <span class="hljs-string">/7c023f01/heroes/1</span> HTTP/1.1</span>
+<span class="hljs-attribute">Accept</span>: <span class="hljs-string">application/json</span>
+<span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span>
+<span class="hljs-attribute">Host</span>: <span class="hljs-string">hero-merge.herokuapp.com</span>
+
+<span class="json">{
+    "<span class="hljs-attribute">hero_name</span>": <span class="hljs-value"><span class="hljs-string">"Super Woman"</span>
+</span>}
+</span></code></pre>
+    <p>Example response:</p>
+    <pre><code class="language-http">```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Date: Fri, 20 Nov 2015 14:18:57 GMT
+
+{
+    "hero_name": "Super Woman",
+    "real_name": "Clark Kent (Kal-El)",
+    ...
+}
+</code></pre>
 </body>
 
 </html>
