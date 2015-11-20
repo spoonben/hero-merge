@@ -1,6 +1,39 @@
 Create Your Own Hero
 ===
-An API for creating super heros.
+An API for creating super heroes.
+
+## The Assignment
+Create an app, in the framework / using the libraries of your choice that would allow
+a user to:
+
+* Create a brand new super hero.
+  * Should require:
+    * A "super hero name"
+    * A real name
+    * Points in __all__ atrributes
+    * A list of powers
+    * A list of weaknesses
+* Merge two super heroes into a new super hero.
+  * User should be able to:
+    * Choose which attributes from either super hero the user would like to use
+    * Choose up to, but not over, 5 super powers total
+    * Name their hero (super hero name, as well as real name)
+  * The new hero should have the weaknesses of __both__ super heroes
+
+The application should be written with your time in mind, we ask that you don't
+spend more than 5 hours working on it, but the choice is yours.
+
+The app should be handed in within a week of the date assigned with the following:
+
+* The source of the app
+  * A gzip or other is fine, on Github would be great too.
+* A short write up of:
+  * How to run the app
+  * An estimate of how much time was spent developing
+  * What you would have done if given more time
+
+Most importantly, have fun with it! This is your chance to show us what you've got!
+
 
 ## Getting an API Key
 In order to develop against the API, you'll need a key. To obtain a key, hit `https://hero-merge.herokuapp.com/getApiKey`.
