@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Heros Docs.md</title>
+    <title>Hero Merge</title>
     <style>
     @import 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.2.0/katex.min.css';
     code {
@@ -1559,7 +1559,7 @@
 
     body {
         margin: 0;
-        padding: 20px;
+        padding:30px;
     }
 
     article,
@@ -4845,44 +4845,43 @@
 <span class="hljs-attribute">Host</span>: <span class="hljs-string">hero-merge.herokuapp.com</span>
 </code></pre>
     <p>Example response:</p>
-    <pre><code class="language-http">```http
-HTTP/1.1 200 OK
-Content-Type: application/json; charset=utf-8
-Date: Fri, 20 Nov 2015 14:18:57 GMT
+    <pre><code class="language-http"><span class="hljs-status">HTTP/1.1 <span class="hljs-number">200</span> OK</span>
+<span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json; charset=utf-8</span>
+<span class="hljs-attribute">Date</span>: <span class="hljs-string">Fri, 20 Nov 2015 14:18:57 GMT</span>
 
-{
-    "id": 3,
-    "hero_name": "Super Man",
-    "real_name": "Clark Kent (Kal-El)",
-    "gender": "Male",
-    "attributes": {
-        "intelligence": 100,
-        "strength": 100,
-        "speed": 100,
-        "durability": 100,
-        "power": 100,
-        "combat": 65
-    },
-    "powers": [
-        "Flight",
-        "Super-strength",
-        "Super Speed",
-        "Super Hearing",
-        "Super Smell",
-        "Healing Factor",
-        "Super Breath",
-        "Heat Vision",
-        "Super Vision"
-    ],
-    "weaknesses": [
-        "Magic",
-        "Kryptonite",
-        "Lead",
-        "Solar Energy"
+<span class="json">{
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">3</span></span>,
+    "<span class="hljs-attribute">hero_name</span>": <span class="hljs-value"><span class="hljs-string">"Super Man"</span></span>,
+    "<span class="hljs-attribute">real_name</span>": <span class="hljs-value"><span class="hljs-string">"Clark Kent (Kal-El)"</span></span>,
+    "<span class="hljs-attribute">gender</span>": <span class="hljs-value"><span class="hljs-string">"Male"</span></span>,
+    "<span class="hljs-attribute">attributes</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">intelligence</span>": <span class="hljs-value"><span class="hljs-number">100</span></span>,
+        "<span class="hljs-attribute">strength</span>": <span class="hljs-value"><span class="hljs-number">100</span></span>,
+        "<span class="hljs-attribute">speed</span>": <span class="hljs-value"><span class="hljs-number">100</span></span>,
+        "<span class="hljs-attribute">durability</span>": <span class="hljs-value"><span class="hljs-number">100</span></span>,
+        "<span class="hljs-attribute">power</span>": <span class="hljs-value"><span class="hljs-number">100</span></span>,
+        "<span class="hljs-attribute">combat</span>": <span class="hljs-value"><span class="hljs-number">65</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">powers</span>": <span class="hljs-value">[
+        <span class="hljs-string">"Flight"</span>,
+        <span class="hljs-string">"Super-strength"</span>,
+        <span class="hljs-string">"Super Speed"</span>,
+        <span class="hljs-string">"Super Hearing"</span>,
+        <span class="hljs-string">"Super Smell"</span>,
+        <span class="hljs-string">"Healing Factor"</span>,
+        <span class="hljs-string">"Super Breath"</span>,
+        <span class="hljs-string">"Heat Vision"</span>,
+        <span class="hljs-string">"Super Vision"</span>
+    ]</span>,
+    "<span class="hljs-attribute">weaknesses</span>": <span class="hljs-value">[
+        <span class="hljs-string">"Magic"</span>,
+        <span class="hljs-string">"Kryptonite"</span>,
+        <span class="hljs-string">"Lead"</span>,
+        <span class="hljs-string">"Solar Energy"</span>
     ]
-}
-</code></pre>
-    <h4><a id="POST_yourapikeyheroes_148"></a>POST <code>[your-api-key]/heroes</code></h4>
+</span>}
+</span></code></pre>
+    <h4><a id="POST_yourapikeyheroes_147"></a>POST <code>[your-api-key]/heroes</code></h4>
     <p>Create a new hero. The <code>id</code> will be automatically generated. All other fields need to be provided in <code>JSON</code> format. See the <a href="#get-your-api-keyheroes">GET</a> example above for the list of expected fields.</p>
     <p>Example request:</p>
     <pre><code class="language-http"><span class="hljs-request">POST <span class="hljs-string">/7c023f01/heroes</span> HTTP/1.1</span>
@@ -4897,19 +4896,18 @@ Date: Fri, 20 Nov 2015 14:18:57 GMT
 }</span>
 </span></code></pre>
     <p>Example response:</p>
-    <pre><code class="language-http">```http
-HTTP/1.1 201 Created
-Content-Type: application/json; charset=utf-8
-Date: Fri, 20 Nov 2015 14:18:57 GMT
+    <pre><code class="language-http"><span class="hljs-status">HTTP/1.1 <span class="hljs-number">201</span> Created</span>
+<span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json; charset=utf-8</span>
+<span class="hljs-attribute">Date</span>: <span class="hljs-string">Fri, 20 Nov 2015 14:18:57 GMT</span>
 
-{
-    "id": 11,
-    "hero_name": "Super Man",
-    "real_name": "Clark Kent (Kal-El)",
+<span class="clojure"><span class="hljs-collection">{
+    <span class="hljs-string">"id"</span>: <span class="hljs-number">11</span>,
+    <span class="hljs-string">"hero_name"</span>: <span class="hljs-string">"Super Man"</span>,
+    <span class="hljs-string">"real_name"</span>: <span class="hljs-string">"Clark Kent (Kal-El)"</span>,
     ...
-}
-</code></pre>
-    <h4><a id="PATCH_yourapikeyheroesid_181"></a>PATCH <code>[your-api-key]/heroes/{id}</code></h4>
+}</span>
+</span></code></pre>
+    <h4><a id="PATCH_yourapikeyheroesid_179"></a>PATCH <code>[your-api-key]/heroes/{id}</code></h4>
     <p>Update an existing hero. Fields must to be provided in <code>JSON</code> format. Fields that are not provided in the request body will not be updated.</p>
     <p>Example request:</p>
     <pre><code class="language-http"><span class="hljs-request">PATCH <span class="hljs-string">/7c023f01/heroes/1</span> HTTP/1.1</span>
@@ -4922,17 +4920,16 @@ Date: Fri, 20 Nov 2015 14:18:57 GMT
 </span>}
 </span></code></pre>
     <p>Example response:</p>
-    <pre><code class="language-http">```http
-HTTP/1.1 200 OK
-Content-Type: application/json; charset=utf-8
-Date: Fri, 20 Nov 2015 14:18:57 GMT
+    <pre><code class="language-http"><span class="hljs-status">HTTP/1.1 <span class="hljs-number">200</span> OK</span>
+<span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json; charset=utf-8</span>
+<span class="hljs-attribute">Date</span>: <span class="hljs-string">Fri, 20 Nov 2015 14:18:57 GMT</span>
 
-{
-    "hero_name": "Super Woman",
-    "real_name": "Clark Kent (Kal-El)",
+<span class="clojure"><span class="hljs-collection">{
+    <span class="hljs-string">"hero_name"</span>: <span class="hljs-string">"Super Woman"</span>,
+    <span class="hljs-string">"real_name"</span>: <span class="hljs-string">"Clark Kent (Kal-El)"</span>,
     ...
-}
-</code></pre>
+}</span>
+</span></code></pre>
 </body>
 
 </html>
