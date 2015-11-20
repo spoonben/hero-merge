@@ -108,7 +108,6 @@ Host: hero-merge.herokuapp.com
 
 Example response:
 ```http
-```http
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
 Date: Fri, 20 Nov 2015 14:18:57 GMT
@@ -166,7 +165,6 @@ Host: hero-merge.herokuapp.com
 
 Example response:
 ```http
-```http
 HTTP/1.1 201 Created
 Content-Type: application/json; charset=utf-8
 Date: Fri, 20 Nov 2015 14:18:57 GMT
@@ -196,7 +194,6 @@ Host: hero-merge.herokuapp.com
 ```
 
 Example response:
-```http
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
