@@ -3,7 +3,7 @@ Create Your Own Hero
 An API for creating super heroes.
 
 ## The Assignment
-Create an app, in the framework / using the libraries of your choice that would allow
+Create a client side app, in the framework / using the libraries of your choice that would allow
 a user to:
 
 * Create a brand new super hero.
