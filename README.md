@@ -21,7 +21,9 @@ a user to:
   * The new hero should have the weaknesses of __both__ super heroes
 
 The application should be written with your time in mind, we ask that you don't
-spend more than 5 hours working on it, but the choice is yours.
+spend more than 5 hours working on it, but if you'd like to, that's fine as well!
+The application doesn't need to be completely finished in order to hand it in;
+we just want to see how you approach the problem.
 
 The app should be handed in within a week of the date assigned with the following:
 

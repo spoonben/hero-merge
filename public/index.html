@@ -1559,7 +1559,7 @@
 
     body {
         margin: 0;
-        padding:30px;
+        padding: 20px;
     }
 
     article,
@@ -3382,6 +3382,10 @@
         -webkit-font-smoothing: antialiased
     }
 
+    #preview {
+        padding: 10px
+    }
+
     #preview a {
         color: #A0AABF;
         text-decoration: underline
@@ -4767,7 +4771,7 @@
             </ul>
         </li>
     </ul>
-    <p>The application should be written with your time in mind, we ask that you don’t spend more than 5 hours working on it, but the choice is yours.</p>
+    <p>The application should be written with your time in mind, we ask that you don’t spend more than 5 hours working on it, but if you’d like to, that's fine as well! The application doesn’t need to be completely finished in order to hand it in; we just want to see how you approach the problem.</p>
     <p>The app should be handed in within a week of the date assigned with the following:</p>
     <ul>
         <li>The source of the app
@@ -4784,12 +4788,12 @@
         </li>
     </ul>
     <p>Most importantly, have fun with it! This is your chance to show us what you’ve got!</p>
-    <h2><a id="Getting_an_API_Key_37"></a>Getting an API Key</h2>
+    <h2><a id="Getting_an_API_Key_39"></a>Getting an API Key</h2>
     <p>In order to develop against the API, you’ll need a key. To obtain a key, hit <code>https://hero-merge.herokuapp.com/getApiKey</code>.</p>
     <p>The returned key is yours! Then just hit <code>https://hero-merge.herokuapp.com/[your-api-key]/heroes</code> to get the initial data back.</p>
-    <h2><a id="API_42"></a>API</h2>
+    <h2><a id="API_44"></a>API</h2>
     <p>The API contains a single endpoint, <code>heroes</code>, which supports <strong>GET</strong>, <strong>POST</strong>, and <strong>PATCH</strong> requests.</p>
-    <h4><a id="GET_yourapikeyheroes_45"></a>GET <code>[your-api-key]/heroes</code></h4>
+    <h4><a id="GET_yourapikeyheroes_47"></a>GET <code>[your-api-key]/heroes</code></h4>
     <p>Returns a list of all available heroes.</p>
     <p>Example request:</p>
     <pre><code class="language-http"><span class="hljs-request">GET <span class="hljs-string">/7c023f01/heroes</span> HTTP/1.1</span>
@@ -4837,7 +4841,7 @@
     ...
 ]
 </span></code></pre>
-    <h4><a id="GET_yourapikeyheroesid_98"></a>GET <code>[your-api-key]/heroes/{id}</code></h4>
+    <h4><a id="GET_yourapikeyheroesid_100"></a>GET <code>[your-api-key]/heroes/{id}</code></h4>
     <p>Returns a single hero’s information</p>
     <p>Example request:</p>
     <pre><code class="language-http"><span class="hljs-request">GET <span class="hljs-string">/7c023f01/heroes/1</span> HTTP/1.1</span>
@@ -4881,7 +4885,7 @@
     ]
 </span>}
 </span></code></pre>
-    <h4><a id="POST_yourapikeyheroes_147"></a>POST <code>[your-api-key]/heroes</code></h4>
+    <h4><a id="POST_yourapikeyheroes_149"></a>POST <code>[your-api-key]/heroes</code></h4>
     <p>Create a new hero. The <code>id</code> will be automatically generated. All other fields need to be provided in <code>JSON</code> format. See the <a href="#get-your-api-keyheroes">GET</a> example above for the list of expected fields.</p>
     <p>Example request:</p>
     <pre><code class="language-http"><span class="hljs-request">POST <span class="hljs-string">/7c023f01/heroes</span> HTTP/1.1</span>
@@ -4907,7 +4911,7 @@
     ...
 }</span>
 </span></code></pre>
-    <h4><a id="PATCH_yourapikeyheroesid_179"></a>PATCH <code>[your-api-key]/heroes/{id}</code></h4>
+    <h4><a id="PATCH_yourapikeyheroesid_181"></a>PATCH <code>[your-api-key]/heroes/{id}</code></h4>
     <p>Update an existing hero. Fields must to be provided in <code>JSON</code> format. Fields that are not provided in the request body will not be updated.</p>
     <p>Example request:</p>
     <pre><code class="language-http"><span class="hljs-request">PATCH <span class="hljs-string">/7c023f01/heroes/1</span> HTTP/1.1</span>
